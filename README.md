@@ -1,2 +1,1 @@
-# terraform
-IaaC
+# infrastructure as a code terraform
