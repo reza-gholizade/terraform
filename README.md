@@ -1,4 +1,4 @@
-# Iinfrastructure as a Code 
+# Infrastructure as Code (IaC)
 
 Create virtual machine from a ova with vsphere provider in terraform
 
