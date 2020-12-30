@@ -12,6 +12,6 @@ for create a new vm , run these comands:
 ```
 for delete:
 ```
-terraform destroy
+~$ terraform destroy
 ```
 
