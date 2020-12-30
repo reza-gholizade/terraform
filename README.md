@@ -1,4 +1,17 @@
 # Iinfrastructure as a Code 
+
+Create virtual machine from a template with vsphere provider in terraform
+
+import your variables in terraform.tfvars file 
+
+for create a new vm , run these comands:
 ```
-Create virtual machine from a template with vsphere provider
+~$ terraform init
+~$ terraform plan
+~$ terraform apply 
 ```
+for delete:
+```
+terraform destroy
+```
+
