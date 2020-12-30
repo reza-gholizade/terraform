@@ -1,6 +1,6 @@
 # Iinfrastructure as a Code 
 
-Create virtual machine from a template with vsphere provider in terraform
+Create virtual machine from a ova with vsphere provider in terraform
 
 import your variables in terraform.tfvars file 
 
