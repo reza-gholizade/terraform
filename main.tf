@@ -39,14 +39,16 @@ resource "vsphere_virtual_machine" "vm" {
   name             = var.vsphere_virtual_machine_name
   resource_pool_id = data.vsphere_resource_pool.pool.id
   datastore_id     = data.vsphere_datastore.datastore.id
-  num_cpus = 1
-  memory   = 1024
+  num_cpus         = 1
+  memory           = 1024
+  datacenter_id    = data.vsphere_datacenter.dc.id
+  host_system_id   = data.vsphere_host.host.id
   # guest_id = data.vsphere_virtual_machine.template.guest_id
   # scsi_type = data.vsphere_virtual_machine.template.scsi_type
   # wait_for_guest_net_timeout = 0
   # wait_for_guest_net_routable = false
   network_interface {
-    network_id   = data.vsphere_network.network.id
+    network_id = data.vsphere_network.network.id
     # adapter_type = data.vsphere_virtual_machine.template.network_interface_types[0]
   }
   # disk {
@@ -73,7 +75,17 @@ resource "vsphere_virtual_machine" "vm" {
   #   }
   # }
   ovf_deploy {
-    local_ovf_path = "/ova/ubuntu18-cloudimg.ova"
+    remote_ovf_url    = "http://192.168.1.25:8000/ubuntu-18.04-server-cloudimg-amd64.ova"
     disk_provisioning = "thin"
+    ovf_network_map = {
+      "VM Network" = data.vsphere_network.network.id
+    }
+    ip_protocol = "IPv4"
   } # end ovf_deploy
+  vapp {
+    properties = {
+      hostname = "localhost"
+      password = "123"
+    }
+  }
 }
