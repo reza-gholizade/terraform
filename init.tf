@@ -8,8 +8,8 @@ terraform {
 }
 
 provider "vsphere" {
-  user           = "USERNAME"
-  password       = "PASSWORD"
-  vsphere_server = "VCENTER_URL"
+  user           = var.vsphere_user
+  password       = var.vsphere_password
+  vsphere_server = var.vsphere_server
   allow_unverified_ssl = true
 }
