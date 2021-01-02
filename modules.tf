@@ -3,6 +3,8 @@ module "vm" {
   vsphere_datacenter               = var.vsphere_datacenter
   vsphere_datastore                = var.vsphere_datastore
   vsphere_resource_pool            = var.vsphere_resource_pool
+  num_cpus                         = var.num_cpus
+  memory                           = var.memory
   vsphere_host                     = var.vsphere_host
   vsphere_network                  = var.vsphere_network
   vsphere_virtual_machine_template = var.vsphere_virtual_machine_template
