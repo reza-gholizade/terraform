@@ -23,15 +23,7 @@ data "vsphere_network" "network" {
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
-# data "vsphere_virtual_machine" "template" {
-#   name          = var.vsphere_virtual_machine_template
-#   datacenter_id = data.vsphere_datacenter.dc.id
-# }
-
-# resource "vsphere_virtual_disk" "myDisk" {
-#   size       = 30
-#   vmdk_path  = "terraform.vmdk"
-#   datacenter = var.vsphere_datacenter
-#   datastore  = var.vsphere_datastore
-#   type       = "thin"
-# }
+data "vsphere_virtual_machine" "template" {
+  name          = var.vsphere_virtual_machine_template
+  datacenter_id = data.vsphere_datacenter.dc.id
+}
