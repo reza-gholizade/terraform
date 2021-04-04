@@ -15,3 +15,11 @@ vsphere_network                  = "NETWORK_NAME"
 vsphere_host                     = "HOST_IP"
 vsphere_virtual_machine_template = "TEMPLATE_NAME"
 vsphere_virtual_machine_name     = "VM_NAME"
+
+#Redis variables
+registry                         = "YOUR REGISTRY"
+repository                       = "YOUR IMAGE REPO"
+storageclass                     = "YOUR STORAGECLASS NAME"
+tag                              = "IMAGE TAG"
+usepass                          = " true or false"
+context                          = "your k8s cluster context name"
