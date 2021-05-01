@@ -7,6 +7,7 @@ import your variables in terraform.tfvars file
 for create a new vm , run these comands:
 ```
 ~$ terraform init
+~$ terraform validate
 ~$ terraform plan
 ~$ terraform apply 
 ```
