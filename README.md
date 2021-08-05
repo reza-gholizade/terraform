@@ -8,8 +8,8 @@ for create a new vm , run these comands:
 ```
 ~$ terraform init
 ~$ terraform validate
-~$ terraform plan
-~$ terraform apply 
+~$ terraform plan -out planed
+~$ terraform apply planed
 ```
 for delete:
 ```
